@@ -1,6 +1,32 @@
-data,canal,tema,resumo,resolvido
-2025-09-15,chat,CDB,Cliente perguntou sobre rentabilidade e prazos,sim
-2025-09-22,telefone,Problema no app,Erro ao visualizar extrato foi corrigido,sim
-2025-10-01,chat,Tesouro Selic,Cliente pediu explicação sobre o funcionamento do Tesouro Direto,sim
-2025-10-12,chat,Metas financeiras,Cliente acompanhou o progresso da reserva de emergência,sim
-2025-10-25,email,Atualização cadastral,Cliente atualizou e-mail e telefone,sim
+[
+  {
+    "pergunta_usuario": "Qual é a porcentagem do meu comprometimento de renda hoje?",
+    "resposta_agente": "Atualmente, 45,25% da sua renda mensal está comprometida com despesas. Esse nível é considerado estável, mas manter o acompanhamento é importante para evitar ultrapassar limites recomendados.",
+    "timestamp": "2025-10-26T18:10:00"
+  },
+  {
+    "pergunta_usuario": "O que acontece se eu passar de 60% de comprometimento?",
+    "resposta_agente": "Quando o comprometimento da renda ultrapassa 60%, aumenta o risco de desequilíbrio financeiro. Isso pode reduzir sua capacidade de lidar com imprevistos e dificultar a formação de reserva de emergência. O ideal é manter margem para segurança financeira.",
+    "timestamp": "2025-10-26T18:12:15"
+  },
+  {
+    "pergunta_usuario": "Por que é importante ficar abaixo de 60%?",
+    "resposta_agente": "Manter o comprometimento abaixo de 60% permite maior flexibilidade financeira. Isso ajuda na organização do orçamento, reduz o risco de endividamento e possibilita investir ou poupar parte da renda para objetivos futuros.",
+    "timestamp": "2025-10-26T18:15:40"
+  },
+  {
+    "pergunta_usuario": "Se eu continuar gastando nesse ritmo, posso ter problemas?",
+    "resposta_agente": "Com o comprometimento atual de 45,25%, sua situação está sob controle. No entanto, caso novas despesas elevem esse percentual significativamente, o risco de ultrapassar o limite recomendado aumenta. Posso simular uma projeção para você, se desejar.",
+    "timestamp": "2025-10-26T18:18:05"
+  },
+  {
+    "pergunta_usuario": "Quanto ainda posso gastar este mês sem ultrapassar 60%?",
+    "resposta_agente": "Considerando sua renda total de R$ 5.500,00, 60% corresponde a R$ 3.300,00. Até o momento você utilizou R$ 2.488,90. Isso significa que ainda há uma margem aproximada de R$ 811,10 antes de atingir esse limite.",
+    "timestamp": "2025-10-26T18:20:30"
+  },
+  {
+    "pergunta_usuario": "Meus gastos estão equilibrados?",
+    "resposta_agente": "Sim. No momento, seu comprometimento está em 45,25%, o que indica equilíbrio financeiro. Ainda há margem para controle seguro, mas é recomendável manter atenção principalmente às categorias de moradia e alimentação.",
+    "timestamp": "2025-10-26T18:23:10"
+  }
+]
