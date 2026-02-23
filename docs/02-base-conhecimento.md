@@ -2,13 +2,12 @@
 
 ## Dados Utilizados
 
-Descreva se usou os arquivos da pasta `data`, por exemplo:
 
-| Arquivo | Formato | Utilização no Agente |
+| Arquivo | Formato | Para que serve para Clara? |
 |---------|---------|---------------------|
-| `historico_atendimento.csv` | CSV | Contextualizar interações anteriores |
-| `perfil_investidor.json` | JSON | Personalizar recomendações |
-| `produtos_financeiros.json` | JSON | Sugerir produtos adequados ao perfil |
+| `historico_chat.json` | JSON | O histórico de chat serve para dar memória ao agente, mantendo contexto das conversas, evitando contradições e permitindo respostas mais personalizadas. |
+| `perfil_usuario.json` | JSON | O perfil do usuário permite personalizar as recomendações com base na renda, idade, profissão e nível de risco. |
+| `historico_alertas.json` | JSON | O histórico de alertas registra todos os avisos financeiros já enviados ao usuário (ex: gasto acima do limite, comprometimento maior que 60%). |
 | `transacoes.csv` | CSV | Analisar padrão de gastos do cliente |
 
 > [!TIP]
@@ -20,7 +19,26 @@ Descreva se usou os arquivos da pasta `data`, por exemplo:
 
 > Você modificou ou expandiu os dados mockados? Descreva aqui.
 
-[Sua descrição aqui]
+- transacoes.csv
+
+Estruturou as transações com os campos: data, descricao, categoria, valor, tipo.
+Padronizou entradas e saídas para permitir cálculo de comprometimento de renda.
+Organizou os dados para leitura automatizada pelo agente.
+
+- perfil_usuario.json
+
+Definiu os campos: nome, idade, profissao, renda_mensal, nivel_sensibilidade.
+Criou base para personalização das respostas e definição de limites financeiros.
+
+- historico_alertas.json
+
+Criou estrutura para registrar alertas gerados com base nas transações. 
+Permitiu rastrear percentual de comprometimento da renda e excesso de gastos.
+
+- historico_chat.json
+
+Estruturou com: pergunta_usuario, resposta_agente, timestamp.
+Adicionou memória contextual para manter coerência nas conversas.
 
 ---
 
@@ -29,12 +47,15 @@ Descreva se usou os arquivos da pasta `data`, por exemplo:
 ### Como os dados são carregados?
 > Descreva como seu agente acessa a base de conhecimento.
 
-[ex: Os JSON/CSV são carregados no início da sessão e incluídos no contexto do prompt]
+No sistema proposto, o carregamento de dados ocorre no Orquestrador desenvolvido em Python, que é acionado sempre que o usuário envia uma mensagem pela interface (Streamlit). Nesse momento, o orquestrador realiza a leitura dos arquivos estruturados que substituem a integração direta com instituições financeiras. As transações são carregadas a partir de arquivos CSV, permitindo o processamento de entradas, saídas e o cálculo do comprometimento da renda. Já as informações de perfil do usuário, histórico de conversas e histórico de alertas são lidas a partir de arquivos JSON, possibilitando personalização, manutenção de contexto e rastreabilidade das interações.
+
+Após o carregamento, os dados são enviados ao módulo de cálculo financeiro, que gera indicadores e possíveis alertas. Esses resultados são então encaminhados ao modelo de linguagem para a geração da resposta ao usuário, passando antes por uma camada de segurança e validação. Ao final do fluxo, novos alertas e interações são gravados novamente nos arquivos JSON, garantindo persistência e atualização contínua das informações utilizadas pelo agente.
 
 ### Como os dados são usados no prompt?
 > Os dados vão no system prompt? São consultados dinamicamente?
 
-[Sua descrição aqui]
+Após o carregamento e os cálculos, os dados (perfil, indicadores financeiros e histórico relevante) são inseridos como contexto interno no prompt do LLM.
+Eles orientam o modelo a gerar respostas personalizadas, adequadas ao perfil do usuário, à situação financeira atual e às regras de segurança do sistema.
 
 ---
 
