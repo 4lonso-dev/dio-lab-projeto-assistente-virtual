@@ -1,42 +1,90 @@
 [
   {
-    "nome": "Tesouro Selic",
-    "categoria": "renda_fixa",
-    "risco": "baixo",
-    "rentabilidade": "100% da Selic",
-    "aporte_minimo": 30.00,
-    "indicado_para": "Reserva de emergência e iniciantes"
+    "data": "2025-10-01",
+    "tipo_alerta": "entrada_receita",
+    "categoria": "receita",
+    "percentual_renda_comprometida": 0.00,
+    "nivel": "informativo",
+    "mensagem": "Receita registrada. Seu saldo mensal foi iniciado com R$ 5.000,00."
   },
   {
-    "nome": "CDB Liquidez Diária",
-    "categoria": "renda_fixa",
-    "risco": "baixo",
-    "rentabilidade": "102% do CDI",
-    "aporte_minimo": 100.00,
-    "indicado_para": "Quem busca segurança com rendimento diário"
+    "data": "2025-10-02",
+    "tipo_alerta": "registro_despesa",
+    "categoria": "moradia",
+    "percentual_renda_comprometida": 24.00,
+    "nivel": "preventivo",
+    "mensagem": "Após o pagamento do aluguel, 24,00% da sua renda mensal está comprometida."
   },
   {
-    "nome": "LCI/LCA",
-    "categoria": "renda_fixa",
-    "risco": "baixo",
-    "rentabilidade": "95% do CDI",
-    "aporte_minimo": 1000.00,
-    "indicado_para": "Quem pode esperar 90 dias (isento de IR)"
+    "data": "2025-10-03",
+    "tipo_alerta": "acumulado_categoria",
+    "categoria": "alimentacao",
+    "percentual_renda_comprometida": 33.00,
+    "nivel": "preventivo",
+    "mensagem": "Com o gasto em supermercado, o comprometimento total da renda chegou a 33,00%."
   },
   {
-    "nome": "Fundo Multimercado",
-    "categoria": "fundo",
-    "risco": "medio",
-    "rentabilidade": "CDI + 2%",
-    "aporte_minimo": 500.00,
-    "indicado_para": "Perfil moderado que busca diversificação"
+    "data": "2025-10-05",
+    "tipo_alerta": "despesa_lazer",
+    "categoria": "lazer",
+    "percentual_renda_comprometida": 34.12,
+    "nivel": "informativo",
+    "mensagem": "Despesa com lazer registrada. Seu comprometimento atual é de 34,12%."
   },
   {
-    "nome": "Fundo de Ações",
-    "categoria": "fundo",
-    "risco": "alto",
-    "rentabilidade": "Variável",
-    "aporte_minimo": 100.00,
-    "indicado_para": "Perfil arrojado com foco no longo prazo"
+    "data": "2025-10-07",
+    "tipo_alerta": "despesa_saude",
+    "categoria": "saude",
+    "percentual_renda_comprometida": 35.90,
+    "nivel": "informativo",
+    "mensagem": "Despesa com saúde registrada. 35,90% da sua renda já foi utilizada."
+  },
+  {
+    "data": "2025-10-10",
+    "tipo_alerta": "acumulado_alimentacao",
+    "categoria": "alimentacao",
+    "percentual_renda_comprometida": 38.30,
+    "nivel": "preventivo",
+    "mensagem": "Com o gasto em restaurante, o total comprometido chegou a 38,30%."
+  },
+  {
+    "data": "2025-10-12",
+    "tipo_alerta": "despesa_transporte",
+    "categoria": "transporte",
+    "percentual_renda_comprometida": 39.20,
+    "nivel": "informativo",
+    "mensagem": "Despesa com transporte registrada. O comprometimento mensal está em 39,20%."
+  },
+  {
+    "data": "2025-10-15",
+    "tipo_alerta": "acumulado_moradia",
+    "categoria": "moradia",
+    "percentual_renda_comprometida": 42.80,
+    "nivel": "preventivo",
+    "mensagem": "Com a conta de luz, seus gastos atingiram 42,80% da renda mensal."
+  },
+  {
+    "data": "2025-10-20",
+    "tipo_alerta": "despesa_saude",
+    "categoria": "saude",
+    "percentual_renda_comprometida": 44.78,
+    "nivel": "informativo",
+    "mensagem": "Despesa com academia registrada. 44,78% da sua renda está comprometida."
+  },
+  {
+    "data": "2025-10-25",
+    "tipo_alerta": "aumento_transporte",
+    "categoria": "transporte",
+    "percentual_renda_comprometida": 49.78,
+    "nivel": "preventivo",
+    "mensagem": "Com o combustível, o comprometimento chegou a 49,78% da renda mensal."
+  },
+  {
+    "data": "2025-10-26",
+    "tipo_alerta": "entrada_receita",
+    "categoria": "receita",
+    "percentual_renda_comprometida": 45.25,
+    "nivel": "estavel",
+    "mensagem": "Bonificação recebida. O comprometimento da renda foi ajustado para 45,25%."
   }
 ]
